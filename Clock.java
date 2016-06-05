@@ -18,7 +18,6 @@ import javafx.geometry.Pos;
 public class Clock extends Application 
 {	
 	Stage timeStage = new Stage();
-	//Pane timePane = new Pane();
 	ClockPane clock = new ClockPane();
 	Scene timeScene = new Scene(clock, 300, 300);
 	
@@ -47,6 +46,7 @@ public class Clock extends Application
 		
 		Pane clockPane = new Pane();
 		
+		//set layout
 		butTime.setPrefSize(100,40);
 		butTime.setLayoutX(100);
 		butTime.setLayoutY(50);
@@ -58,6 +58,7 @@ public class Clock extends Application
 		butAlarmClock.setLayoutY(230);
 		clockPane.getChildren().addAll(butTime, butCountdown, butAlarmClock);
 		
+		//button listener
 		butTime.setOnMouseClicked(e -> {
 			showTimeStage();
 		});
@@ -81,6 +82,7 @@ public class Clock extends Application
 		primaryStage.show();
 	}
 	
+	//show time stage
 	void showTimeStage()
 	{		
 		GregorianCalendar calendar = new GregorianCalendar();
@@ -98,6 +100,7 @@ public class Clock extends Application
 		timeStage.show();		
 	}
 	
+	//show countdown stage
 	void showCountdownStage()
 	{
 		txtCountDown.setAlignment(Pos.BASELINE_RIGHT);
@@ -117,6 +120,7 @@ public class Clock extends Application
 		countdownStage.show();
 	}
 	
+	//to countdown
 	void startCountdown()
 	{
 		labShowCT.setText(txtCountDown.getText());
@@ -141,6 +145,7 @@ public class Clock extends Application
 		}
 	}
 	
+	//show alarmClock stage
 	void showAlarmClockStage()
 	{
 		alarmClockStage.setTitle("AlarmClock");
