@@ -8,60 +8,68 @@ import javafx.scene.text.Text;
 
 public class ClockPane extends Pane 
 {
+	//data field
 	private int hour;
 	private int minute;
 	private int second;
-  
+	
+	//no-arg constructor
 	public ClockPane() 
 	{
 		setCurrentTime();
 	}
-
+	
+	//constructor
 	public ClockPane(int hour, int minute, int second) 
 	{
 		this.hour = hour;
 		this.minute = minute;
 		this.second = second;
 	}
-
+	
+	//mwthod of get hour
 	public int getHour() 
 	{
 		return hour;
 	}
 
+	//mwthod of set hour
 	public void setHour(int hour) 
 	{
 		this.hour = hour;
 		paintClock();
 	}
 
+	//mwthod of get minute
 	public int getMinute() 
 	{
 		return minute;
 	}
 
+	//mwthod of set minute
 	public void setMinute(int minute) 
 	{
 		this.minute = minute;
 		paintClock();
 	}
 
+	//mwthod of get second
 	public int getSecond()
 	{
 		return second;
 	}
 
+	//mwthod of set second
 	public void setSecond(int second) 
 	{
 		this.second = second;
 		paintClock();
 	}	
   
-
+	//mwthod of set current time
 	public void setCurrentTime() 
 	{
 		Calendar calendar = new GregorianCalendar();
-
 
 		this.hour = calendar.get(Calendar.HOUR_OF_DAY);
 		this.minute = calendar.get(Calendar.MINUTE);
@@ -70,7 +78,7 @@ public class ClockPane extends Pane
 		paintClock();
 	}
   
-
+	//mwthod of print clock
 	private void paintClock() 
 	{
 		double clockRadius = Math.min(getWidth(), getHeight()) * 0.8 * 0.5;
@@ -111,6 +119,7 @@ public class ClockPane extends Pane
 	}
   
 	@Override
+	//mwthod of set width
 	public void setWidth(double width) 
 	{
 		super.setWidth(width);
@@ -118,6 +127,7 @@ public class ClockPane extends Pane
 	}
   
 	@Override
+	//mwthod of set height
 	public void setHeight(double height) 
 	{
 		super.setHeight(height);
