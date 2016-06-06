@@ -27,46 +27,46 @@ public class ClockPane extends Pane
 		this.second = second;
 	}
 	
-	//mwthod of get hour
+	//method of get hour
 	public int getHour() 
 	{
 		return hour;
 	}
 
-	//mwthod of set hour
+	//method of set hour
 	public void setHour(int hour) 
 	{
 		this.hour = hour;
 		paintClock();
 	}
 
-	//mwthod of get minute
+	//method of get minute
 	public int getMinute() 
 	{
 		return minute;
 	}
 
-	//mwthod of set minute
+	//method of set minute
 	public void setMinute(int minute) 
 	{
 		this.minute = minute;
 		paintClock();
 	}
 
-	//mwthod of get second
+	//method of get second
 	public int getSecond()
 	{
 		return second;
 	}
 
-	//mwthod of set second
+	//method of set second
 	public void setSecond(int second) 
 	{
 		this.second = second;
 		paintClock();
 	}	
   
-	//mwthod of set current time
+	//method of set current time
 	public void setCurrentTime() 
 	{
 		Calendar calendar = new GregorianCalendar();
@@ -78,7 +78,7 @@ public class ClockPane extends Pane
 		paintClock();
 	}
   
-	//mwthod of print clock
+	//method of print clock
 	private void paintClock() 
 	{
 		double clockRadius = Math.min(getWidth(), getHeight()) * 0.8 * 0.5;
@@ -119,7 +119,7 @@ public class ClockPane extends Pane
 	}
   
 	@Override
-	//mwthod of set width
+	//method of set width
 	public void setWidth(double width) 
 	{
 		super.setWidth(width);
@@ -127,7 +127,7 @@ public class ClockPane extends Pane
 	}
   
 	@Override
-	//mwthod of set height
+	//method of set height
 	public void setHeight(double height) 
 	{
 		super.setHeight(height);
